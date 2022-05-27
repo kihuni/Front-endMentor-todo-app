@@ -5,16 +5,36 @@
     background-image: url('../images/upper.jpg');
 }
 
-.todo{
+.header-box{
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 15%;
+    left: 30%;
+    right: 30%;
     height: 70vh;
     padding: 0;
+    margin: 0;
+    width: 50%;
+    border: solid 1px black;
+   
+}
+.header-sbox{
+    display: flex;
+    justify-content: space-between;
+
+}
+h1{
+    color: #fff;
+    position: relative;
+    left: 10%;
+    font-size: 2.4rem;
+    cursor: pointer;
 }
 
-.title{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.icons{
+    position: relative;
+    right: 10%;
+    top: 7.8px;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
 }
