@@ -1,0 +1,20 @@
+
+.background{
+    height: 65vh;
+    background: no-repeat;
+    background-image: url('../images/upper.jpg');
+}
+
+.todo{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 70vh;
+    padding: 0;
+}
+
+.title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
