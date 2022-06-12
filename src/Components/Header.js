@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import "./Header.css";
 import sunIcon from "../images/icon-sun.svg";
 import moonIcon from "../images/icon-moon.svg";
-import "./Header.css";
+import lightBackground from "../images/bg-desktop-light.jpg"
+import darkBackground from "../images/upper.jpg"
+import lightMobile from "../images/bg-mobile-light.jpg"
+import darkMobile from "../images/bg-mobile-dark.jpg"
+import {useState} from "react"
+
+
 
 const Header = () => {
-  const [theme, setTheme] = useState("dark");
-  const [iconTheme, setIconTheme] = useState(sunIcon);
+
+  const[theme, setTheme] = useState({
+    desktop: {
+      light:lightBackground,
+      dark: darkBackground
+    },
+    mobile: {
+      light: lightMobile,
+      dark: darkMobile
+    }
+  })
+  const [{iconTheme, setIconTheme}] = useState(sunIcon);
 
   const changeTheme = () => {
-    setTheme(theme == "dark" ? "light" : "dark");
+    setTheme(theme == desktop.light ? desktop.dark :desktop.dark);
     setIconTheme(theme == "dark" ? moonIcon : sunIcon);
   };
+
   return (
     <div>
       <div className="header"></div>
